@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision, Path, Loop Coverage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="page1.html">White-box Testing</a>
+        <a href="page2.html">Decision, Path และ Loop Coverage</a>
+        <a href="page3.html">Mobile & API Testing</a>
+        <a href="page4.html">Performance Testing</a>
+        <a href="page5.html">Usability Testing</a>
+        <a href="page6.html">Test Automation</a>
+    </div>
+
+    <header>
+        <h1>Decision, Path และ Loop Coverage</h1>
+    </header>
+
+    <section>
+        <h2>Decision Coverage (การครอบคลุมการตัดสินใจ)</h2>
+        <ul>
+            <li>เป็นการทดสอบทุกผลลัพธ์ที่เกิดขึ้นได้จากการตัดสินใจในโปรแกรม</li>
+            <li>คำนวณ Test Coverage ได้จาก:<br>
+                Test Coverage = (จำนวน decision outcomes ที่ทดสอบ / decision outcomes ทั้งหมด)
+            </li>
+        </ul>
+
+        <h3>ตัวอย่าง Decision Coverage</h3>
+        <pre>
+if A > 10 then
+    B = 20
+else
+    B = 30
+endif
+
+Test cases:
+- A = 11 (Yes)
+- A = 10 (No)
+
+Test coverage = 100%
+        </pre>
+    </section>
+
+    <section>
+        <h2>Path Coverage (การครอบคลุมเส้นทาง)</h2>
+        <p>การทดสอบที่ครอบคลุมทุกเส้นทางที่โปรแกรมสามารถดำเนินไปได้ เช่น Yes->No, No->Yes</p>
+
+        <h3>ตัวอย่าง Path Coverage</h3>
+        <pre>
+if (M > 200 and N < 10):
+    A = 1
+endif
+
+if M > 20:
+    A = 2
+    B = C
+end if
+
+เส้นทางที่ควรทดสอบ: TT, FF, TF, FT
+
+ตัวอย่าง test cases:
+- M=201, N=9 (TT)
+- M=10, N=9 (FF)
+- M=30, N=9 (FT)
+        </pre>
+    </section>
+
+    <section>
+        <h2>Loop Testing (การทดสอบลูป)</h2>
+        <ul>
+            <li>ไม่ผ่านลูปเลย (0 รอบ)</li>
+            <li>วนลูปหนึ่งครั้ง</li>
+            <li>วนลูปสองครั้ง</li>
+            <li>วนลูปหลายครั้ง</li>
+            <li>กรณีขอบเขต (N-1, N, N+1)</li>
+        </ul>
+
+        <h3>ตัวอย่าง Loop Testing</h3>
+        <pre>
+count = int(input("enter number"))
+
+while count < 20:
+    print("count:", count)
+    count = count + 1
+
+print("Good bye")
+
+Test cases:
+- count ≥ 20 (ข้ามลูป)
+- count = 19 (วน 1 รอบ)
+- count = 18 (วน 2 รอบ)
+- count = 17 (วน 3 รอบ)
+        </pre>
+    </section>
+
+    <section>
+        <h2>Nested Loop Testing (ทดสอบลูปที่ซ้อนกัน)</h2>
+        <p>เริ่มจากลูปชั้นในสุดสู่ลูปชั้นนอก</p>
+
+        <h3>ตัวอย่าง Nested Loop Testing</h3>
+        <pre>
+for i in range(20):
+    for j in range(30):
+        do something
+
+print("Good bye")
+
+Outer loop:
+- ข้ามลูป (i ≥ 20)
+- วนลูป 1 รอบ (i = 19)
+- วนลูป 2 รอบ (i = 18)
+- จำนวนสุ่ม (i = 17)
+
+Inner loop:
+- ข้ามลูป (j ≥ 30)
+- วนลูป 1 รอบ (j = 29)
+- วนลูป 2 รอบ (j = 28)
+- จำนวนสุ่ม (j = 27)
+        </pre>
+    </section>
+
+    <section>
+        <h2>สรุปการทดสอบ White-box</h2>
+        <ul>
+            <li>Statement Coverage: ทุกคำสั่งถูกทดสอบ</li>
+            <li>Decision Coverage: เงื่อนไขทุก outcomes</li>
+            <li>Path Coverage: ทุกเส้นทางที่เป็นไปได้</li>
+            <li>Loop Coverage: ทดสอบลูปในทุกสถานการณ์</li>
+        </ul>
+
+        <p>เน้นการวิเคราะห์โครงสร้างภายในโค้ดอย่างละเอียดและครอบคลุมทุกสถานการณ์ เพื่อให้มั่นใจในคุณภาพของซอฟต์แวร์ก่อนนำไปใช้งานจริง</p>
+    </section>
+
+    <footer>
+        <p> Software Testing </p>
+        <a href="index.html">HOME</a>
+    </footer>
+
+</body>
+
+</html>

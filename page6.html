@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Day1 - White-box Testing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="page1.html">White-box Testing</a>
+        <a href="page2.html">Decision, Path และ Loop Coverage</a>
+        <a href="page3.html">Mobile & API Testing</a>
+        <a href="page4.html">Performance Testing</a>
+        <a href="page5.html">Usability Testing</a>
+        <a href="page6.html">Test Automation</a>
+    </div>
+
+    <header>
+        <h1>การทดสอบอัตโนมัติ (Test Automation)</h1>
+    </header>
+
+    <section>
+        <h2>Test Scripts (สคริปต์สำหรับการทดสอบ)</h2>
+        <p>Test Scripts เป็นโปรแกรมขนาดเล็กที่เขียนขึ้นในภาษาสคริปต์หรือภาษาโปรแกรมที่ช่วยให้สามารถควบคุมการป้อนข้อมูลเข้าสู่โมดูลซอฟต์แวร์และตรวจสอบว่าผลลัพธ์ตรงกับที่คาดหวังหรือไม่</p>
+        <h2>Test Scripts ทำงานโดย</h2>
+        <li>1. ควบคุมอินพุตของซอฟต์แวร์โมดูล (Controlling the inputs to a software module)</li>
+        <li>2. ตรวจสอบว่าผลลัพธ์ที่ได้ตรงกับที่คาดหวังหรือไม่ (Verifying that the results match the expectations)</li>
+    </section>
+
+    <section>
+        <h2>Risk (ความเสี่ยงใน Test Automation)</h2>
+        <li>ความเสี่ยงที่อาจเกิดขึ้นหากการทดสอบอัตโนมัติไม่ถูกต้อง</li>
+        <li>การกำหนดข้อจำกัดของระบบเพื่อหลีกเลี่ยงข้อผิดพลาดจากการทดสอบอัตโนมัติ</li>
+    </section>
+
+    <section>
+        <h2>Robot Framework</h2>
+        <p>Robot Framework เป็นเครื่องมือสำหรับการทดสอบอัตโนมัติที่ได้รับความนิยมและเป็นโอเพ่นซอร์ส 
+            ซึ่งออกแบบมาเพื่อช่วยในการทดสอบระบบที่มี UI 
+            รวมถึง API และ Mobile Testing
+        </p>
+        <h3>คุณสมบัติของ Robot Framework</h3>
+        <ul>
+            <li>เป็น โอเพ่นซอร์ส (Open-source)</li>
+            <li>เป็นเครื่องมือสำหรับ การทดสอบอัตโนมัติ (Test Automation Tool)</li>
+            <li>ใช้หลัก Keyword-based programming ซึ่งช่วยให้สามารถเขียนสคริปต์ได้ง่าย</li>
+        </ul>
+        <h2>ตัวอย่างโค้ด Robot Framework</h2>
+        <pre>
+            *** Settings ***
+            Library    SeleniumLibrary
+            
+            *** Variables ***
+            ${WEBURL}    https://www.kmutnb.ac.th
+            ${BROWSER}    Chrome
+            
+            *** Test Cases ***
+            Valid Browse
+                Open Browser To Login Page
+                Welcome Page Should Be Open
+                [Teardown] Close Browser
+            
+            *** Keywords ***
+            Open Browser To Login Page
+                Open Browser    ${WEBURL}    ${BROWSER}
+            
+            Welcome Page Should Be Open
+                Title Should Be    มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ - หน้าแรก
+        </pre>
+
+    </section>
+
+    <section>
+        <h2>องค์ประกอบของ Robot Framework</h2>
+        <ul>
+            <li>Library ที่ใช้ (Library that you use)</li>
+            <li>Keywords ในไลบรารีนั้น (Keywords in that library)</li>
+            <li>Keywords ที่เราสร้างขึ้นเอง หรือดึงมาจากไลบรารีที่ใช้ (Keywords you create/from library you use)</li>
+            <li>Variables ที่เราสร้างขึ้นเอง (Variable you create)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>ทำไมต้องใช้ Robot Framework?</h2>
+        <ul>
+            <li>ใช้งานง่าย เพราะใช้ Keyword-based programming ทำให้เขียนเทสเคสได้โดยไม่ต้องใช้โค้ดที่ซับซ้อน</li>
+            <li>รองรับ SeleniumLibrary ทำให้สามารถทดสอบเว็บแอปพลิเคชันได้สะดวก</li>
+            <li>รองรับการทดสอบ API และ Mobile Applications</li>
+            <li>สามารถขยายและปรับแต่งได้ง่าย โดยสามารถสร้าง Keywords ของตัวเองหรือใช้ Keywords จากไลบรารีที่มีอยู่แล้ว</li>
+        </ul>
+
+    </section>
+
+    <section>
+        <h2>โครงสร้างของ Test Automation ด้วย Robot Framework</h2>
+        <ul>
+            1. Test Case (กรณีทดสอบ)
+            <ul>
+                <li>เป็นการกำหนดว่าต้องการทดสอบอะไรบ้าง</li>
+                <li>ต้องมีการกำหนดเงื่อนไขและผลลัพธ์ที่คาดหวัง</li>
+            </ul>
+            2. Keywords (คำสั่งที่ใช้ในการทดสอบ)
+            <ul>
+                <li>เป็นคำสั่งที่ใช้ในเทสเคสเพื่อให้ Robot Framework ทำงานตามที่กำหนด</li>
+            </ul>
+            3. Variables (ตัวแปร)
+            <ul>
+                <li>ใช้เก็บค่าต่างๆ ที่สามารถนำไปใช้ซ้ำใน Test Cases หรือ Keywords</li>
+            </ul>
+            4. Libraries (ไลบรารีที่ใช้)
+            <ul>
+                <li>เป็นไลบรารีที่ช่วยให้สามารถใช้งานคำสั่งสำเร็จรูปสำหรับการทดสอบ เช่น SeleniumLibrary สำหรับทดสอบเว็บ</li>
+            </ul>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Robot Framework + SeleniumLibrary</h2>
+        <p>
+            Robot Framework สามารถใช้งานร่วมกับ SeleniumLibrary เพื่อทดสอบเว็บแอปพลิเคชัน โดยมีคำสั่งสำคัญดังนี้:
+        </p>
+        <h3>ตัวอย่างคำสั่งสำคัญ</h3>
+        <pre>
+            คำสั่ง                 ความหมาย
+            Open Browser         เปิดเบราว์เซอร์
+            Go To                ไปที่ URL ที่กำหนด
+            Click Element	 คลิกที่องค์ประกอบบนเว็บ
+            Input Text	         ป้อนข้อความลงในช่อง Input
+            Submit Form	         ส่งฟอร์ม
+            Close Browser	 ปิดเบราว์เซอร์
+        </pre>
+
+        <h2>ตัวอย่างการใช้ Robot Framework + SeleniumLibrary</h2>
+        <pre>
+            *** Settings ***
+            Library    SeleniumLibrary
+            
+            *** Variables ***
+            ${URL}    https://www.example.com
+            ${BROWSER}    Chrome
+            
+            *** Test Cases ***
+            Test Login
+                Open Browser    ${URL}    ${BROWSER}
+                Input Text    id=username    testuser
+                Input Text    id=password    testpassword
+                Click Element    id=login-button
+                Page Should Contain    Welcome, testuser!
+                Close Browser
+        </pre>
+    </section>
+
+    <section>
+        <h2>ข้อดีของการใช้ Test Automation</h2>
+        <ul>
+            1. ช่วยลดเวลาในการทดสอบ (Reduce Testing Time) <br>
+            2. เพิ่มความแม่นยำ (Increase Accuracy) – ลดข้อผิดพลาดที่เกิดจากมนุษย์ <br>
+            3. สามารถทดสอบซ้ำได้โดยไม่ต้องใช้แรงงานคน (Repeatability) <br>
+            4. สามารถทดสอบหลายแพลตฟอร์มได้ (Cross-platform testing) <br>
+            5. สามารถบันทึกและเรียกใช้งานผลการทดสอบได้ง่าย (Test Reports & Logs)
+        </ul>
+    </section>
+<section>
+    <h2>ข้อจำกัดของการทดสอบอัตโนมัติ</h2>
+    <ul>
+        <li>ต้องใช้เวลาในการพัฒนา Test Scripts</li>
+        <li>อาจต้องใช้ผู้เชี่ยวชาญในการเขียนและดูแลสคริปต์</li>
+        <li>บางครั้งไม่สามารถครอบคลุมทุกสถานการณ์ได้ เช่น การทดสอบ Usability หรือ UX</li>
+    </ul>
+</section>
+    <section>
+        <h2>สรุปเนื้อหาสำคัญ</h2>
+        <ul>
+            <li>Test Scripts คือโปรแกรมที่ใช้ควบคุมการป้อนข้อมูลและตรวจสอบผลลัพธ์</li>
+            <li>Robot Framework เป็นเครื่องมือทดสอบอัตโนมัติแบบโอเพ่นซอร์สที่ใช้หลัก Keyword-based programming</li>
+            <li>สามารถใช้ร่วมกับ SeleniumLibrary เพื่อทดสอบเว็บแอปพลิเคชันได้ง่ายขึ้น</li>
+            <li>Test Automation ช่วยลดเวลาในการทดสอบ เพิ่มความแม่นยำ และทำให้สามารถทดสอบซ้ำได้</li>
+            <li>อย่างไรก็ตาม การทดสอบอัตโนมัติยังมีข้อจำกัดบางประการ เช่น ต้องใช้เวลาในการพัฒนาสคริปต์ และอาจไม่สามารถทดสอบ UX ได้อย่างมีประสิทธิภาพ</li>
+        </ul>
+    </section>
+
+
+    <footer>
+        <p>บทเรียน Software Testing - White-box Testing</p>
+        <a href="index.html">HOME</a>
+    </footer>
+
+</body>
+
+</html>

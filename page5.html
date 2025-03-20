@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Day1 - White-box Testing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="page1.html">White-box Testing</a>
+        <a href="page2.html">Decision, Path และ Loop Coverage</a>
+        <a href="page3.html">Mobile & API Testing</a>
+        <a href="page4.html">Performance Testing</a>
+        <a href="page5.html">Usability Testing</a>
+        <a href="page6.html">Test Automation</a>
+    </div>
+
+    <header>
+        <h1>การทดสอบการใช้งาน (Usability Testing)</h1>
+    </header>
+
+    <section>
+        <h2>ระดับของการทดสอบ (Test Levels)</h2>
+
+        <li>ระดับการทดสอบที่เกี่ยวข้องกับการทดสอบการใช้งานมักมีความสำคัญตั้งแต่การออกแบบไปจนถึงการพัฒนาซอฟต์แวร์</li>
+    </section>
+
+    <section>
+        <h2>Usability (การใช้งาน)</h2>
+        <h3>ผู้ใช้ต้องการอะไร? หรือคาดหวังอะไร?</h3>
+        <ul>
+            <li>ความสามารถของแอปพลิเคชันในการตอบสนองต่อความต้องการของผู้ใช้งาน</li>
+            <li>แอปพลิเคชันควรใช้งานง่าย และช่วยให้ผู้ใช้ทำงานได้อย่างมีประสิทธิภาพ</li>
+        </ul>
+        <h2>ความคาดหวังด้านการใช้งาน (Usability Expectations)</h2>
+        <h3>แอปพลิเคชันมือถือมีฐานผู้ใช้ที่กว้างและหลากหลายมากกว่าแอปพลิเคชันทั่วไป</h3>
+        <ul>
+            <li>แอปพลิเคชันควรสามารถใช้งานได้ทุกที่และทุกเวลา</li>
+            <li>สิ่งสำคัญที่ต้องพิจารณา</li>
+            <ul>
+                <li>ความเรียบง่ายและใช้งานง่าย (Simplicity and ease of use)</li>
+                <li>เลย์เอาต์ที่รองรับทั้งนิ้วมือและเมาส์ (Layout that accommodates fingers and mouse)</li>
+                <li>การใช้งานที่เป็นธรรมชาติ ไม่ต้องเรียนรู้เพิ่มเติม (Intuitiveness - no need to learn)</li>
+                <li>คำแนะนำที่มองเห็นได้แต่ไม่รบกวน (Instructions that are visible but not intrusive)</li>
+                <li>ระบบนำทางที่พาผู้ใช้ไปยังจุดที่ต้องการได้อย่างถูกต้อง (Navigation that leads in the right direction)
+                </li>
+            </ul>
+            <li>การใช้งานที่ไม่ดี = ผู้ใช้ละทิ้งแอป (Poor usability equals abandonment)</li>
+        </ul>
+    </section>
+    <section>
+        <h2>ปัญหาด้านการใช้งาน (Usability Issues)</h2>
+        <ul>
+            <li>แอปพลิเคชันที่ไม่สามารถตอบสนองต่อความต้องการของผู้ใช้ได้</li>
+            <li>การออกแบบที่ซับซ้อนหรือไม่ตรงกับความคาดหวังของผู้ใช้</li>
+            <li>ข้อผิดพลาดที่เกิดจาก UX/UI ที่ไม่ดี</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>ผู้เข้าร่วมในการทดสอบ (Participants)</h2>
+        <h3>ใครควรเข้าร่วมในการทดสอบการใช้งาน?</h3>
+        <ul>
+            <li>ผู้ใช้จริง (Real Users) – ผู้ใช้ที่เป็นกลุ่มเป้าหมายของแอปพลิเคชัน</li>
+            <li>ผู้เชี่ยวชาญด้านการใช้งาน (Usability Experts) – นักออกแบบ UX
+                หรือผู้เชี่ยวชาญที่สามารถวิเคราะห์จุดอ่อนของ UI/UX ได้</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Usability Personas (ตัวตนของผู้ใช้จำลอง)</h2>
+        <li>การสร้างตัวตนของผู้ใช้เพื่อจำลองพฤติกรรมของผู้ใช้งานจริง</li>
+        <li>ใช้ในการออกแบบและพัฒนาซอฟต์แวร์เพื่อให้ตรงกับความต้องการของกลุ่มเป้าหมาย</li>
+    </section>
+
+    <section>
+        <h2>ทำไมผู้ใช้จริงถึงสำคัญ? (Real Users Are Important)</h2>
+        <li>ผู้ใช้จริงให้ข้อมูลเชิงลึกที่เป็นประโยชน์เกี่ยวกับการใช้งานจริงของแอปพลิเคชัน</li>
+        <li>ความคิดเห็นและปัญหาที่พบจากผู้ใช้จริงช่วยให้สามารถปรับปรุงซอฟต์แวร์ให้เหมาะสมได้มากขึ้น
+        </li>
+    </section>
+
+    <section>
+        <h2>สถานที่ทดสอบ (Where to Test)</h2>
+        <ul>
+            <li>ห้องทดลองการใช้งาน (Usability Lab)</li>
+            <ul>
+                <li>สิ่งแวดล้อมที่มีการควบคุมเพื่อวิเคราะห์การใช้งาน</li>
+            </ul>
+            <li>สถานการณ์ที่เหมือนจริง (Realistic Experience)</li>
+            <ul>
+                <li>การทดสอบในสถานการณ์จริง เช่น การใช้แอปพลิเคชันในชีวิตประจำวันของผู้ใช้</li>
+            </ul>
+        </ul>
+    </section>
+    <section>
+        <h2>วิธีการทดสอบ (How to Test)</h2>
+        <ul>
+            <li>มีรายละเอียดหรือสคริปต์เป็นขั้นตอน (Provided details or step-to-step script)</li>
+            <li>มีเอกสารคู่มือและกระบวนการที่ต้องปฏิบัติตาม (Provided manual and process documents, sometimes needs
+                training)</li>
+            <li>กำหนดภารกิจหรือเป้าหมายให้ผู้ใช้ทำ (Assign some tasks)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>วิธีการประเมินผล (How to Evaluate)</h2>
+        <ul>
+            <li>สังเกตพฤติกรรมของผู้ใช้ (Observe)</li>
+            <li>ให้ผู้ใช้พูดออกมาขณะใช้งาน (Think-out-loud method)</li>
+            <li>ไม่ควรมีการแทรกแซงผลการทดสอบ (Don’t influence the results)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>ผลลัพธ์ที่ได้รับจากการทดสอบ (Results)</h2>
+        <ul>
+            <li>ข้อผิดพลาดที่พบ (Defects)</li>
+            <li>ความคิดเห็นของผู้ใช้ (Impression)</li>
+            <li>ประสิทธิภาพ, ประสิทธิผล, และความพึงพอใจ (Efficiency, effectiveness, satisfaction)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Usability Measures (การวัดผลด้านการใช้งาน)</h2>
+        <ul>
+            <li>จำนวนภารกิจที่ผู้ใช้สามารถทำสำเร็จ (Number of tasks completed)</li>
+            <li>เวลาที่ใช้ในการทำภารกิจหนึ่งหรือหลายอย่างให้เสร็จ (Time taken to complete a task)</li>
+            <li>จำนวนข้อผิดพลาดหรือขั้นตอนที่เกินความจำเป็น (Number of mistakes or extra steps taken)</li>
+            <li>จำนวนการกระทำที่ต้องใช้ในการทำภารกิจให้สำเร็จ (Number of actions required to complete the task - เช่น
+                จำนวนครั้งที่ต้องคลิก, เปลี่ยนหน้าจอ ฯลฯ)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>การเข้าถึง (Accessibility)</h2>
+        <ul>
+            <li>ความสามารถของแอปพลิเคชันในการเข้าถึงได้โดยผู้ใช้ทุกกลุ่ม รวมถึงผู้พิการ</li>
+            <li>ควรมีมาตรฐานรองรับเช่น WCAG (Web Content Accessibility Guidelines)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>เมื่อไหร่ควรทำ Usability Testing? (When Do Usability Testing)</h2>
+        <ul>
+            <li>การตรวจสอบการออกแบบและไดอะแกรม (Verification on design and diagram)</li>
+            <li>การทดสอบความถูกต้องโดยใช้ผลิตภัณฑ์จริง (Validation using the final product)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>มาตรฐานและแนวทางปฏิบัติที่เกี่ยวข้อง (Standards)</h2>
+        <ul>
+            <li>กฎเกณฑ์ด้านเสียง (Audio Rules)</li>
+            <li>แนวทางการจัดการข้อผิดพลาด (Error Rules)</li>
+            <li>หลักการเกี่ยวกับการเข้าถึงข้อมูล (Accessibility Rules)</li>
+            <li>กฎเกณฑ์เรื่องความคมชัดของสี (Contrast Rules)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>การเข้าถึงและความคมชัดของการแสดงผล (Accessibility & Contrast)</h2>
+        <ul>
+            <li>การเลือกใช้สีและคอนทราสต์ที่ช่วยให้ผู้ใช้ทุกกลุ่มสามารถมองเห็นได้ชัดเจน</li>
+            <li>ควรหลีกเลี่ยงสีที่ทำให้ผู้มีปัญหาด้านสายตาไม่สามารถแยกแยะได้</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>การใช้สีและความคมชัด (Accessibility - Colors)</h2>
+        <ul>
+            <li>ออกแบบให้รองรับผู้ใช้ที่มีปัญหาด้านการมองเห็นสี เช่น Colorblind</li>
+            <li>ควรเลือกใช้สีที่มีความคมชัดและสามารถมองเห็นได้ง่าย</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>ฟังก์ชันการทำงานและการใช้งาน (Functionality and Usability)</h2>
+        <ul>
+            <li>ต้องแน่ใจว่าฟังก์ชันการทำงานของแอปพลิเคชันสอดคล้องกับความต้องการของผู้ใช้</li>
+            <li>การออกแบบ UX/UI ควรมีความสมดุลระหว่างการใช้งานและความสวยงาม</li>
+        </ul>
+    </section>
+
+
+    <footer>
+        <p>บทเรียน Software Testing - White-box Testing</p>
+        <a href="index.html">HOME</a>
+    </footer>
+
+</body>
+
+</html>

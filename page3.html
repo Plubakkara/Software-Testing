@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile & API Testing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="page1.html">White-box Testing</a>
+        <a href="page2.html">Decision, Path และ Loop Coverage</a>
+        <a href="page3.html">Mobile & API Testing</a>
+        <a href="page4.html">Performance Testing</a>
+        <a href="page5.html">Usability Testing</a>
+        <a href="page6.html">Test Automation</a>
+    </div>
+
+    <header>
+        <h1>การทดสอบแอปพลิเคชันมือถือและ API (Mobile & API Testing)</h1>
+    </header>
+
+    <section>
+        <h2>Mobile Application คืออะไร?</h2>
+        <p>Mobile Application คือซอฟต์แวร์หรือแอปพลิเคชันที่ถูกออกแบบมาให้ทำงานบนอุปกรณ์มือถือ เช่น สมาร์ตโฟนหรือแท็บเล็ต</p>
+    </section>
+
+    <section>
+        <h2>ประเภทของ Mobile Application</h2>
+
+        <h3>1. Native Mobile Application</h3>
+        <ul>
+            <li>มีประสิทธิภาพสูง ค่าใช้จ่ายในการพัฒนาสูง</li>
+            <li>ติดตั้งแอปลงบนเครื่องโดยตรง (เช่น Google Maps, Facebook, LinkedIn)</li>
+            <li>Android: Java, iOS: Swift</li>
+        </ul>
+
+        <h3>2. Browser-based Application</h3>
+        <ul>
+            <li>เข้าถึงผ่านเบราว์เซอร์</li>
+            <li>ค่าใช้จ่ายต่ำ พัฒนาง่าย</li>
+            <li>เทคโนโลยี: HTML, CSS, JavaScript, Bootstrap</li>
+        </ul>
+
+        <h3>3. Hybrid Mobile Application</h3>
+        <ul>
+            <li>ผสมผสาน Native และ Web</li>
+            <li>ทำงานออนไลน์และออฟไลน์ได้</li>
+            <li>เทคโนโลยี: HTML, CSS, JavaScript, Bootstrap และ Native</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>ประเภทของ Mobile Devices</h2>
+        <ul>
+            <li>Basic Phone (โทรและ SMS เท่านั้น)</li>
+            <li>Feature Phone (ฟีเจอร์เพิ่มเติมเล็กน้อย เช่น กล้อง)</li>
+            <li>Smartphone (เซ็นเซอร์หลากหลาย ติดตั้งแอปเพิ่มได้)</li>
+            <li>Tablet (คล้ายสมาร์ตโฟนแต่จอใหญ่กว่า)</li>
+            <li>Wearables (อุปกรณ์สวมใส่คู่กับสมาร์ตโฟน)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>ความท้าทายของการทดสอบมือถือ (Mobile Testing Challenges)</h2>
+        <ul>
+            <li>รองรับแพลตฟอร์มและอุปกรณ์หลากหลาย</li>
+            <li>UI และ UX ที่ต่างกัน</li>
+            <li>ข้อจำกัดทรัพยากร (RAM น้อย)</li>
+            <li>ความหลากหลายของผู้ใช้งาน</li>
+            <li>ผ่านการตรวจสอบก่อนขึ้นแอปสโตร์</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>แนวทางการทดสอบแอปมือถือที่สำคัญ</h2>
+        <ul>
+            <li>Input Methods (คีย์บอร์ด, กล้อง, QR Code)</li>
+            <li>Screen Orientation (หมุนหน้าจอ)</li>
+            <li>Interrupts (การขัดจังหวะ เช่น โทรเข้า)</li>
+            <li>Permissions (การอนุญาตเข้าถึง)</li>
+            <li>Power Consumption (การใช้พลังงานแบตเตอรี่)</li>
+            <li>Notifications (การแจ้งเตือน)</li>
+            <li>Interoperability (ความเข้ากันได้กับแอปอื่น)</li>
+            <li>Connectivity Methods (วิธีการเชื่อมต่อเครือข่าย)</li>
+            <li>Installability (การติดตั้งและถอนการติดตั้ง)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>การทดสอบ API (API Testing)</h2>
+
+        <h3>API คืออะไร?</h3>
+        <p>Application Programming Interface: เชื่อมต่อระหว่าง Client และ Server</p>
+
+        <h3>ประเภท API</h3>
+        <ul>
+            <li>Web API, REST API, SOAP API</li>
+            <li>REST API ใช้ JSON, SOAP API ใช้ XML</li>
+        </ul>
+
+        <h3>คำสั่ง HTTP ที่สำคัญ</h3>
+        <ul>
+            <li>GET, POST, PUT, DELETE</li>
+        </ul>
+
+        <h3>ประเภทของ API Testing</h3>
+        <ul>
+            <li>Functional Testing (response กับ input ต่างๆ)</li>
+            <li>Security Testing (authentication, authorization)</li>
+            <li>Performance Testing (load, stress, scalability)</li>
+            <li>Error Handling (error code, error message)</li>
+        </ul>
+
+        <h3>HTTP Status Codes ที่สำคัญ</h3>
+        <ul>
+            <li>1xx: ข้อมูลเบื้องต้น</li>
+            <li>2xx: สำเร็จ</li>
+            <li>3xx: การเปลี่ยนเส้นทาง</li>
+            <li>4xx: ข้อผิดพลาดจากผู้ใช้</li>
+            <li>5xx: ข้อผิดพลาดจากเซิร์ฟเวอร์</li>
+        </ul>
+    </section>
+
+
+    <footer>
+        <p>บทเรียน Software Testing - Mobile & API Testing</p>
+        <a href="index.html">HOME</a>
+    </footer>
+
+</body>
+
+</html>
